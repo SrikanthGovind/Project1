@@ -1,0 +1,184 @@
+@use "../components" as *;
+
+.home {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background-color: $color-1;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  header {
+    width: 100%;
+    height: 150px;
+    background: white;
+    @include space;
+    padding-inline: 50px;
+    position: relative;
+
+    .logo {
+      width: 150px;
+      height: inherit;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .nav-items {
+      @include trans;
+      ul {
+        @include center;
+        gap: 30px;
+        li {
+          font-size: $fs-2;
+          font-weight: bold;
+          color: $color-4;
+          cursor: pointer;
+
+          &:hover {
+            color: $color-5;
+            @include trans;
+            transform: scale(1.09);
+          }
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+  .header-wrapper {
+    // display: none;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: $color-6;
+    position: absolute;
+    @include trans;
+  }
+
+  .main-content {
+    @include center;
+    flex-direction: column;
+    gap: 30px;
+    p {
+      margin: 70px auto;
+      font-size: calc($fs-1 * 5 - 10px);
+      font-weight: normal;
+      letter-spacing: 30px;
+      color: $color-3;
+    }
+    h2 {
+      font-size: calc($fs-1 * 2 - 10px);
+      margin: 0px auto;
+      word-spacing: 20px;
+      letter-spacing: 10px;
+      color: $color-4;
+    }
+    button {
+      margin: 50px auto;
+      padding: 20px 35px;
+      border-radius: 30px;
+      font-size: $fs-2;
+      border: 0;
+      color: $color-3;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $color-6;
+        background: $color-4;
+        @include trans;
+        transform: scale(1.09);
+      }
+    }
+  }
+  @include responsive(phone) {
+    position: absolute;
+    header {
+      padding: 30px;
+      height: 100px;
+      .logo {
+        width: 100px;
+      }
+
+      .nav-items {
+        //  display: none;
+        top: 300px;
+        right: 50px;
+        z-index: 2000;
+        position: absolute;
+        ul {
+          flex-direction: column;
+          gap: 50px;
+        }
+      }
+      .hamburger {
+        display: block;
+        border: 1px solid green;
+        span {
+          font-size: calc($fs-1 * 2.5);
+          color: $color-4;
+        }
+      }
+    }
+    .main-content {
+      p {
+        font-size: 45px;
+        letter-spacing: 10px;
+      }
+      h2 {
+        font-size: $fs-1;
+        letter-spacing: 5px;
+        text-align: center;
+      }
+      button {
+        font-size: 15px;
+        padding: 15px 20px;
+      }
+    }
+  }
+  .main-container header .hamburger:hover ~ .nav-items {
+    display: none;
+  }
+  .main-container header .hamburger:hover ~
+  .main-container .header-wrapper {
+    display: block;
+  }
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  background: $color-1;
+
+  .about-con {
+    width: 100%;
+    height: 85vh;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  .about-content {
+    width: 40%;
+    height: inherit;
+    .about-img {
+      width: 40%;
+      height: inherit;
+    }
+  }
+}
+
+@supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0, 0)) {
+  .main-container {
+    height: 95vh;
+  }
+  .about-con {
+    height: 95vh;
+  }
+}

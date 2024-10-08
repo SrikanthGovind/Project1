@@ -1,0 +1,55 @@
+// color
+
+$color-1:#77E4C8;
+$color-2:#CDE8E5;
+$color-3:#003C43;
+$color-4:#135D66;
+$color-5:#77B0AA;
+$color-6:#E3FEF7;
+
+// font sizes
+
+$fs-1:20px;
+$fs-2:17px;
+
+// media queries
+
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin responsive($device){
+    @if($device == "phone"){
+         @media screen and (max-width:450px){
+               @content;
+         }
+    }
+    @if($device == "tab"){
+        @media screen and (max-width:700px){
+              @content;
+        }
+   } 
+   @if($device == "tab-por"){
+    @media screen and (max-width:1200px){
+          @content;
+    }
+     } 
+   @if($device == "desktop"){
+    @media screen and (max-width:1800px){
+          @content;
+    }
+   }
+
+}
+
+
+@mixin trans{
+    transition: all .3s ease-in-out;
+}

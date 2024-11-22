@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper-container">
+     <section class="main-container">
+      <header>
+        <div class="list home">
+          <a href="">Home</a>
+        </div>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search"/>
+          <div class="search-icon" id="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="list new-relese">
+          <a href="#movie_genre_title_1">Action</a>
+        </div>
+        <div class="list popular">
+          <a href="#movie_genre_title_2">Horror</a>
+        </div>
+        <div class="list genre">
+          <a href="#movie_genre_title_3">Fantasy</a>
+        </div>
+        <div class="nav-btn">
+          <button>Login</button>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <div class="content-title">
+          <h3>Joker(2024)</h3>
+        </div>
+        <div class="content-desc">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
+            consectetur vel atque ratione sequiveniam deleniti repellend consectetur adipisicing elit.
+             Magni expedita ea impedit sapiente dignissimos. Porro suscipit cupiditate doloribus consequatur. Dolore?
+          </p>
+        </div>
+      </div>
+      <div class="rating-container">
+        <div class="wrapper">
+          <div class="movie-type">
+            <div class="movie-title">
+              <a href="">Action</a>
+            </div>
+            <div class="imbd">
+              <h5>IMBD:7:3</h3>
+            </div>
+          </div>
+          <div class="movie-type">
+            <div class="movie-title">
+              <a href="">Thriller</a>
+            </div>
+            <div class="duration">
+              <h5>2h 18 min</h3>
+            </div>
+          </div>
+          <div class="watch-list">
+            <i class="fa-solid fa-plus" id="fa_plus"></i>
+            <button id="watchlist">Add to watchlist</button>
+          </div>
+          <div class="watch-trailer">
+            <i class="fa-solid fa-store"></i>
+            <button> Watch Trailer</button>
+          </div>
+        </div>
+         <div class="btn-wrapper">
+             <div class="watch-now">
+                 <i class="fa-solid fa-play"></i>
+                   <button>watch Now</button>
+                 </div>
+         </div>
+    
+      </div>
+ 
+
+
+      <div class="movie-list" id="movie-list-con">
+      </div>
+
+      <div class="slide_button">
+        <i class="fa-solid fa-angles-left " id='slideleft' ></i>
+         <i class="fa-solid fa-angles-right" id='slideright' ></i>
+       </div>
+
+
+    </section> 
+
+
+
+
+<!-- !-------------------------------------------------- -->
+      
+    <section class="movie_genre_container">
+           
+        <div class="movie_genre_item" id="genre_item_1">
+          <section class="movie_genre_item_head">
+              <h1 id="movie_genre_title_1">Action</h1>
+              <a href="#overlay" class="seemore"  >See More</a>
+          </section>
+
+           <section class="movie_genre_item_body" id="movie_body-1">           
+           </section>
+        </div>
+
+        <div class="movie_genre_item" id="genre_item_2">
+          <section class="movie_genre_item_head">
+              <h1 id="movie_genre_title_2">Horror</h1>
+              <a href="#overlay" class="seemore" >See More</a>
+          </section>
+
+           <section class="movie_genre_item_body" id="movie_body-2">
+           </section>
+        </div>
+            
+        <div class="movie_genre_item" id="genre_item_3">
+          <section class="movie_genre_item_head">
+              <h1 id="movie_genre_title_3">Fantasy</h1>
+              <a href="#overlay" class="seemore">See More</a>
+          </section>
+
+           <section class="movie_genre_item_body" id="movie_body-3">           
+           </section>
+        </div>
+
+        <div class="movie_genre_item" id="genre_item_4">
+          <section class="movie_genre_item_head">
+              <h1 id="movie_genre_title_4">Romance</h1>
+              <a href="#overlay" class="seemore">See More</a>
+          </section>
+
+           <section class="movie_genre_item_body" id="movie_body-4">
+           </section>
+        </div>
+      </section>
+
+      <section class="movie_overlay" id="overlay">
+           <div class="overlay_head">
+              <h1 id="overlay_title"></h1>
+           </div>
+           <div class="overlay_body" id="overlay_items">
+                   
+           </div>
+           <div class="overlay_items_desc" id="overlay-con">
+                    <div class="overlay_items_wrapper" id="overlay_wrapper">
+                       <div class="part-1">
+                         <div class="overlay_title"     id="wrap_title">Avengers Endgame</div>
+                         <div class="overlay_duration" id="wrap_duration">2024 | 2h 24m | Hindi</div>
+                         <div class="overlay_desc"     id="wrap_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellendus quis quidem? Perferendis, veniam.</div>
+                         <div class="overlay_type"     id="wrap_type">Drama</div>
+                         <div class="overlay_button">
+                          <button><i class="fa-solid fa-play"></i>  Subscribe</button>
+                         </div>
+                         
+                        </div>
+                        <div class="recommend_movie">
+                          <div class="more">
+                            <h1>More Like This</h1>
+                          </div>
+                          <div class="box_items">
+                         
+                            <div class="box">
+                              <img src="https://filmartgallery.com/cdn/shop/files/Avengers-Endgame-Official-Movie-Poster-295-Vintage-Movie-Poster-Original-1-Sheet-27x41_600x.jpg?v=1705115113" alt="">
+                            </div>
+                            <div class="box">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcN1UmsRuWO1rE4swN27OjcqAYjDZfCiHI_Tk_2FxsJi3QcIaQH8rPAJGdCkj_89lEYS8&usqp=CAU" alt="">
+                            </div>
+                            <div class="box">
+                              <img src="https://images-cdn.ubuy.co.id/634ea19134504532036ec134-tomorrow-sunny-24x36-inch-art-silk.jpg" alt="">
+                            </div>
+                            <div class="box">
+                              <img src="https://m.media-amazon.com/images/M/MV5BYjY2NDZhN2EtZmYwNS00NDU2LThiODAtNmY4OWY2ODNmZWRmXkEyXkFqcGc@._V1_.jpg" alt="">
+                            </div>
+                               
+                          </div>
+                        </div>
+                        <div id="overlay_exit">
+                          <i class="fa-solid fa-x"></i>
+                        </div>
+                    </div>
+
+
+           </div>
+          
+      </section>
+   </div>
+
+    <script src="script-fun.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
